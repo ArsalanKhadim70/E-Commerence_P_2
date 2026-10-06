@@ -28,6 +28,8 @@ const App = () => {
 
   useEffect(() => {
     console.log("Env Key:", import.meta.env.VITE_FIREBASE_API_KEY);
+    console.log("Cloud Name:", import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
+    console.log("Preset:", import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET);
   }, []);
 
   if (isAdminRoute) {
