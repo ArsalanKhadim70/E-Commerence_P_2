@@ -14,6 +14,10 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
+
+// // Debugging ke liye check karein
+console.log("Firebase API Key:", import.meta.env.VITE_FIREBASE_API_KEY);
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 

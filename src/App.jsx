@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { Routes, Route } from "react-router-dom"
 //import page 
@@ -19,9 +19,16 @@ import { useLocation } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 
 
+
+
 const App = () => {
   const location = useLocation()
+
   const isAdminRoute = location.pathname.startsWith('/Admin')
+
+  useEffect(() => {
+    console.log("Env Key:", import.meta.env.VITE_FIREBASE_API_KEY);
+  }, []);
 
   if (isAdminRoute) {
     return (
